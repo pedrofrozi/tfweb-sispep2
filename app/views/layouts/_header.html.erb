@@ -1,0 +1,21 @@
+<div class="row-fluid">
+	<div id="logo" class="span3">
+		<h1>SISPEP</h1>	
+	</div>
+	<div class="span7">
+		
+	</div>
+    <div id="header_account_menu" class="span2">
+    	<ul class="inline">
+	      	<% if user_signed_in? %>
+	      		<li>
+	      			<%= link_to "Sair", destroy_user_session_path, :method => :delete %>
+	      		</li>
+	      	<% else %>
+	      		<li>
+	      			<%= link_to "Criar conta", new_user_registration_path %> | <%= link_to "Entrar", new_user_session_path %>
+	      		</li>
+	      	<% end %>		      
+		</ul>
+	</div>
+</div>
