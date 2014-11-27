@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @basic_publication.profile_id %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @basic_publication.title %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @basic_publication.year %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @basic_publication.country %>
+</p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @basic_publication.language %>
+</p>
+
+<p>
+  <strong>Webpage:</strong>
+  <%= @basic_publication.webpage %>
+</p>
+
+<p>
+  <strong>English title:</strong>
+  <%= @basic_publication.english_title %>
+</p>
+
+<p>
+  <strong>Publication type:</strong>
+  <%= @basic_publication.publication_type %>
+</p>
+
+<%= link_to 'Edit', edit_basic_publication_path(@basic_publication) %> |
+<%= link_to 'Back', basic_publications_path %>

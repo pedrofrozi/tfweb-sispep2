@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :basic_publications
+
   resources :profiles
 
   get 'pages/home'

@@ -1,0 +1,49 @@
+<%= form_for(@basic_publication) do |f| %>
+  <% if @basic_publication.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@basic_publication.errors.count, "error") %> prohibited this basic_publication from being saved:</h2>
+
+      <ul>
+      <% @basic_publication.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :profile_id %><br>
+    <%= f.number_field :profile_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br>
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :language %><br>
+    <%= f.text_field :language %>
+  </div>
+  <div class="field">
+    <%= f.label :webpage %><br>
+    <%= f.text_field :webpage %>
+  </div>
+  <div class="field">
+    <%= f.label :english_title %><br>
+    <%= f.text_field :english_title %>
+  </div>
+  <div class="field">
+    <%= f.label :publication_type %><br>
+    <%= f.text_field :publication_type %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
