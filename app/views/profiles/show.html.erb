@@ -1,22 +1,12 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>User:</strong>
-  <%= @profile.user_id %>
+  <strong>Nome:</strong>
+  <%= @profile.first_name %> <%= @profile.last_name %>
 </p>
 
 <p>
-  <strong>First name:</strong>
-  <%= @profile.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @profile.last_name %>
-</p>
-
-<p>
-  <strong>Phone:</strong>
+  <strong>Telefone:</strong>
   <%= @profile.phone %>
 </p>
 
@@ -26,39 +16,39 @@
 </p>
 
 <p>
-  <strong>Address:</strong>
+  <strong>Endereço:</strong>
   <%= @profile.address %>
 </p>
 
 <p>
-  <strong>Institution:</strong>
+  <strong>Instituição:</strong>
   <%= @profile.institution %>
 </p>
 
 <p>
-  <strong>Job:</strong>
+  <strong>Cargo:</strong>
   <%= @profile.job %>
 </p>
 
 <p>
-  <strong>Webpage:</strong>
+  <strong>Página pessoal:</strong>
   <%= @profile.webpage %>
 </p>
 
 <p>
-  <strong>Citation name:</strong>
+  <strong>Nome para citação:</strong>
   <%= @profile.citation_name %>
 </p>
 
 <p>
-  <strong>Areas of interest:</strong>
+  <strong>Áreas de interesse:</strong>
   <%= @profile.areas_of_interest %>
 </p>
 
 <p>
-  <strong>Additional information:</strong>
+  <strong>Informação adicional:</strong>
   <%= @profile.additional_information %>
 </p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
-<%= link_to 'Back', profiles_path %>
+<%= link_to 'Editar', edit_profile_path(@profile) %> |
+<%= link_to 'Voltar', profiles_path %>

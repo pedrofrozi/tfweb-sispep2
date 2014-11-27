@@ -1,47 +1,28 @@
-<h1>Listing profiles</h1>
+<h2>Pesquisadores</h2>
 
-<table>
+<table class="table table-striped">
   <thead>
-    <tr>
-      <th>User</th>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th>Address</th>
-      <th>Institution</th>
-      <th>Job</th>
-      <th>Webpage</th>
-      <th>Citation name</th>
-      <th>Areas of interest</th>
-      <th>Additional information</th>
-      <th colspan="3"></th>
+    <tr>      
+      <th>Nome</th>      
+      <th>Email</th>      
+      <th class="table-actions"> </th>
     </tr>
   </thead>
 
   <tbody>
     <% @profiles.each do |profile| %>
-      <tr>
-        <td><%= profile.user_id %></td>
-        <td><%= profile.first_name %></td>
-        <td><%= profile.last_name %></td>
-        <td><%= profile.phone %></td>
+      <tr>        
+        <td><%= profile.first_name %> <%= profile.last_name %></td>        
         <td><%= profile.email %></td>
-        <td><%= profile.address %></td>
-        <td><%= profile.institution %></td>
-        <td><%= profile.job %></td>
-        <td><%= profile.webpage %></td>
-        <td><%= profile.citation_name %></td>
-        <td><%= profile.areas_of_interest %></td>
-        <td><%= profile.additional_information %></td>
-        <td><%= link_to 'Show', profile %></td>
-        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
-        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="table-actions">
+        	<%= link_to 'Mostrar', profile %>
+        	<%= link_to '| Editar ', edit_profile_path(profile) %>
+        	<%= link_to '| Deletar', profile, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Profile', new_profile_path %>
+
