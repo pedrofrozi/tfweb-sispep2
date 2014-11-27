@@ -15,10 +15,12 @@ class ProfilesController < ApplicationController
   # GET /profiles/new
   def new
     @profile = Profile.new
+    @user = current_user
   end
 
   # GET /profiles/1/edit
-  def edit
+  def edit    
+    @user = current_user
   end
 
   # POST /profiles
