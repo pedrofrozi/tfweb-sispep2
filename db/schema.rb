@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141127132124) do
+ActiveRecord::Schema.define(version: 20141207190345) do
 
   create_table "basic_publications", force: true do |t|
     t.integer  "profile_id"
@@ -22,6 +22,36 @@ ActiveRecord::Schema.define(version: 20141127132124) do
     t.string   "webpage"
     t.string   "english_title"
     t.string   "publication_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "editoras", force: true do |t|
+    t.string   "nome"
+    t.string   "cidade"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "eventos", force: true do |t|
+    t.string   "titulo"
+    t.integer  "ano"
+    t.string   "pais"
+    t.string   "idioma"
+    t.string   "home_page"
+    t.string   "titulo_ingles"
+    t.string   "nome_evento"
+    t.string   "cidade_evento"
+    t.integer  "ano_realizacao"
+    t.string   "titulo_anais"
+    t.string   "volume"
+    t.string   "fasciculo"
+    t.string   "serie"
+    t.integer  "pagina_inicial"
+    t.integer  "pagina_final"
+    t.string   "isbn"
+    t.integer  "editora_id"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

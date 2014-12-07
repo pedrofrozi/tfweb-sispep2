@@ -1,0 +1,94 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Titulo:</strong>
+  <%= @evento.titulo %>
+</p>
+
+<p>
+  <strong>Ano:</strong>
+  <%= @evento.ano %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @evento.pais %>
+</p>
+
+<p>
+  <strong>Idioma:</strong>
+  <%= @evento.idioma %>
+</p>
+
+<p>
+  <strong>Home page:</strong>
+  <%= @evento.home_page %>
+</p>
+
+<p>
+  <strong>Titulo ingles:</strong>
+  <%= @evento.titulo_ingles %>
+</p>
+
+<p>
+  <strong>Nome evento:</strong>
+  <%= @evento.nome_evento %>
+</p>
+
+<p>
+  <strong>Cidade evento:</strong>
+  <%= @evento.cidade_evento %>
+</p>
+
+<p>
+  <strong>Ano realizacao:</strong>
+  <%= @evento.ano_realizacao %>
+</p>
+
+<p>
+  <strong>Titulo anais:</strong>
+  <%= @evento.titulo_anais %>
+</p>
+
+<p>
+  <strong>Volume:</strong>
+  <%= @evento.volume %>
+</p>
+
+<p>
+  <strong>Fasciculo:</strong>
+  <%= @evento.fasciculo %>
+</p>
+
+<p>
+  <strong>Serie:</strong>
+  <%= @evento.serie %>
+</p>
+
+<p>
+  <strong>Pagina inicial:</strong>
+  <%= @evento.pagina_inicial %>
+</p>
+
+<p>
+  <strong>Pagina final:</strong>
+  <%= @evento.pagina_final %>
+</p>
+
+<p>
+  <strong>Isbn:</strong>
+  <%= @evento.isbn %>
+</p>
+
+<p>
+  <strong>Editora:</strong>
+  <%= @evento.editora.nome %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @evento.user.profile.citation_name %>
+</p>
+
+<%= link_to 'Edit', edit_evento_path(@evento) %> |
+<%= link_to 'Back', eventos_path %>

@@ -1,0 +1,89 @@
+<%= form_for(@evento) do |f| %>
+  <% if @evento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@evento.errors.count, "error") %> prohibited this evento from being saved:</h2>
+
+      <ul>
+      <% @evento.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :titulo %><br>
+    <%= f.text_field :titulo %>
+  </div>
+  <div class="field">
+    <%= f.label :ano %><br>
+    <%= f.number_field :ano %>
+  </div>
+  <div class="field">
+    <%= f.label :pais %><br>
+    <%= f.text_field :pais %>
+  </div>
+  <div class="field">
+    <%= f.label :idioma %><br>
+    <%= f.text_field :idioma %>
+  </div>
+  <div class="field">
+    <%= f.label :home_page %><br>
+    <%= f.text_field :home_page %>
+  </div>
+  <div class="field">
+    <%= f.label :titulo_ingles %><br>
+    <%= f.text_field :titulo_ingles %>
+  </div>
+  <div class="field">
+    <%= f.label :nome_evento %><br>
+    <%= f.text_field :nome_evento %>
+  </div>
+  <div class="field">
+    <%= f.label :cidade_evento %><br>
+    <%= f.text_field :cidade_evento %>
+  </div>
+  <div class="field">
+    <%= f.label :ano_realizacao %><br>
+    <%= f.number_field :ano_realizacao %>
+  </div>
+  <div class="field">
+    <%= f.label :titulo_anais %><br>
+    <%= f.text_field :titulo_anais %>
+  </div>
+  <div class="field">
+    <%= f.label :volume %><br>
+    <%= f.text_field :volume %>
+  </div>
+  <div class="field">
+    <%= f.label :fasciculo %><br>
+    <%= f.text_field :fasciculo %>
+  </div>
+  <div class="field">
+    <%= f.label :serie %><br>
+    <%= f.text_field :serie %>
+  </div>
+  <div class="field">
+    <%= f.label :pagina_inicial %><br>
+    <%= f.number_field :pagina_inicial %>
+  </div>
+  <div class="field">
+    <%= f.label :pagina_final %><br>
+    <%= f.number_field :pagina_final %>
+  </div>
+  <div class="field">
+    <%= f.label :isbn %><br>
+    <%= f.text_field :isbn %>
+  </div>
+  <div class="field">
+    <%= f.label :editora %><br>	
+	<%= select("evento", "editora_id", Editora.all.collect {|p| [ p.nome, p.id ] }, { include_blank: true })%>    
+  </div>
+  <div class="field">
+    <%= f.label :user %><br>	
+	<%= select("evento", "user_id", User.all.collect {|p| [ p.profile.citation_name, p.id ] }, { include_blank: true })%>    
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

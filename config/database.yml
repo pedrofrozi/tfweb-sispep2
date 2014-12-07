@@ -15,7 +15,7 @@ development:
   database: sispep_development
   pool: 5
   username: root
-  password: mysql
+  password: root
   host: localhost
   port: 3306
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +28,7 @@ test:
   database: sispep_test
   pool: 5
   username: root
-  password: mysql
+  password: root
   host: localhost
   port: 3306
 

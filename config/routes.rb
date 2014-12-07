@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :eventos
+
+  resources :editoras
+  
   resources :basic_publications, :path => 'publications'
 
   resources :profiles do
