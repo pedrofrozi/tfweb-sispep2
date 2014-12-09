@@ -15,6 +15,7 @@ class BasicPublicationsController < ApplicationController
   # GET /basic_publications/new
   def new
     @basic_publication = BasicPublication.new
+    @profile = current_user.profile
   end
 
   # GET /basic_publications/1/edit

@@ -10,6 +10,7 @@ class ProfilesController < ApplicationController
   # GET /profiles/1
   # GET /profiles/1.json
   def show
+    @publications = @profile.basic_publications
   end
 
   # GET /profiles/new

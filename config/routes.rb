@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :basic_publications
+  resources :basic_publications, :path => 'publications'
 
-  resources :profiles
+  resources :profiles do
+    resources :basic_publications, :path => 'publications'
+  end
 
   get 'pages/home'
 
