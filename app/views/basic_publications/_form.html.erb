@@ -1,7 +1,7 @@
 <%= form_for(@basic_publication) do |f| %>
   <% if @basic_publication.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@basic_publication.errors.count, "error") %> prohibited this basic_publication from being saved:</h2>
+      <h2>Os <%= pluralize(@basic_publication.errors.count, "Erro") %> não permitiram que a publicação fosse gravada:</h2>
 
       <ul>
       <% @basic_publication.errors.full_messages.each do |message| %>

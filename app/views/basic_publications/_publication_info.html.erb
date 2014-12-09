@@ -6,6 +6,8 @@
 			<% end %>
 		</div>
 	</div>	
-	<% @publications.each do |publication| %>					
-		<%= link_to publication.title, profile_basic_publication_path(@profile, publication)%>		
-	<% end %>
+	<ul class="unstyled">
+		<% @publications.each do |publication| %>					
+			<li><%= link_to publication.title, profile_basic_publication_path(@profile, publication)%></li>		
+		<% end %>
+	</ul>

@@ -29,7 +29,7 @@ class BasicPublicationsController < ApplicationController
 
     respond_to do |format|
       if @basic_publication.save
-        format.html { redirect_to @basic_publication, notice: 'Basic publication was successfully created.' }
+        format.html { redirect_to @basic_publication.profile, notice: 'Publicação criada com sucesso' }
         format.json { render :show, status: :created, location: @basic_publication }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class BasicPublicationsController < ApplicationController
   def update
     respond_to do |format|
       if @basic_publication.update(basic_publication_params)
-        format.html { redirect_to @basic_publication, notice: 'Basic publication was successfully updated.' }
+        format.html { redirect_to @basic_publication.profile, notice: 'Publicação salva com sucesso' }
         format.json { render :show, status: :ok, location: @basic_publication }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class BasicPublicationsController < ApplicationController
   def destroy
     @basic_publication.destroy
     respond_to do |format|
-      format.html { redirect_to basic_publications_url, notice: 'Basic publication was successfully destroyed.' }
+      format.html { redirect_to basic_publications_url, notice: 'Publicação deletada com sucesso.' }
       format.json { head :no_content }
     end
   end
@@ -66,6 +66,7 @@ class BasicPublicationsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_basic_publication
       @basic_publication = BasicPublication.find(params[:id])
+      @profile = current_user.profile
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
