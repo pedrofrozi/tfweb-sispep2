@@ -1,0 +1,11 @@
+	<div class="row-fluid section-header">
+		<h3 class="span6">Publicações</h3>
+		<div class="span6">
+			<%= link_to new_profile_basic_publication_path(@profile), :class => "btn btn-primary pull-right" do %>
+				Nova publicação
+			<% end %>
+		</div>
+	</div>	
+	<% @publications.each do |publication| %>					
+		<%= link_to publication.title, profile_basic_publication_path(@profile, publication)%>		
+	<% end %>

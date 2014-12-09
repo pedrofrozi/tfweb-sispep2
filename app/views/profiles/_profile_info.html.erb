@@ -1,0 +1,55 @@
+	<h2>
+	  <strong>
+	  	<%= @profile.first_name %> <%= @profile.last_name %>
+	  </strong>
+	</h2>	
+	<hr />	
+	<div class="row-fluid section-header">
+		<h3 class="span6">Informações:</h3>
+		<div class="span6">
+			<%= link_to 'Editar perfil', edit_profile_path(@profile), :class => "btn btn-primary pull-right" %>
+		</div>
+	</div>	
+	<p>
+	  <strong>Telefone:</strong>
+	  <%= @profile.phone %>
+	</p>	
+	<p>
+	  <strong>Email:</strong>
+	  <%= @profile.email %>
+	</p>	
+	<p>
+	  <strong>Endereço:</strong>
+	  <%= @profile.address %>
+	</p>	
+	<p>
+	  <strong>Instituição:</strong>
+	  <%= @profile.institution %>
+	</p>	
+	<p>
+	  <strong>Cargo:</strong>
+	  <%= @profile.job %>
+	</p>	
+	<p>
+	  <strong>Página pessoal:</strong>
+	  <%= @profile.webpage %>
+	</p>	
+	<p>
+	  <strong>Nome para citação:</strong>
+	  <%= @profile.citation_name %>
+	</p>	
+	<p>
+	  <strong>Áreas de interesse:</strong>
+	  <%= @profile.areas_of_interest %>
+	</p>	
+	<p>
+	  <strong>Outras informações:</strong>
+	  <%= @profile.additional_information %>
+	</p>	
+	<% if !@profile.basic_publications.blank? %>
+		<hr />
+		<h3>Publicações</h3>
+		<% @profile.basic_publications.each do |publication| %>
+			<p>hey</p>
+		<% end %>	
+	<% end %>	
